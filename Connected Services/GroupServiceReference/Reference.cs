@@ -1494,6 +1494,13 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetInvoicebbydate", ReplyAction="http://tempuri.org/IGroupService/GetInvoicebbydateResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Order_Table[]> GetInvoicebbydateAsync(System.DateTime d);
         
+        // CODEGEN: Generating message contract since the wrapper name (getAllItems) of message getAllItemsRequest does not match the default value (getAllItems1)
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getAllItems", ReplyAction="http://tempuri.org/IGroupService/getAllItemsResponse")]
+        Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse getAllItems1(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getAllItems", ReplyAction="http://tempuri.org/IGroupService/getAllItemsResponse")]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse> getAllItems1Async(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Addproducts", ReplyAction="http://tempuri.org/IGroupService/AddproductsResponse")]
         string Addproducts(string name, string description, decimal price, int active, int maskid, int admin, int quantity);
         
@@ -1667,13 +1674,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/Getcategorybyname", ReplyAction="http://tempuri.org/IGroupService/GetcategorybynameResponse")]
         System.Threading.Tasks.Task<string> GetcategorybynameAsync(string name);
-        
-        // CODEGEN: Generating message contract since the wrapper name (getAllItems) of message getAllItemsRequest does not match the default value (getAllItems1)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getAllItems", ReplyAction="http://tempuri.org/IGroupService/getAllItemsResponse")]
-        Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse getAllItems1(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getAllItems", ReplyAction="http://tempuri.org/IGroupService/getAllItemsResponse")]
-        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse> getAllItems1Async(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetProductsByMask_Type", ReplyAction="http://tempuri.org/IGroupService/GetProductsByMask_TypeResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.Product[] GetProductsByMask_Type(string Name);
@@ -1983,6 +1983,29 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetInvoicebbydateAsync(d);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService.getAllItems1(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request) {
+            return base.Channel.getAllItems1(request);
+        }
+        
+        public Group_MaskInc_FrontEnd.GroupServiceReference.Order_Item[] getAllItems1(int orderID) {
+            Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest inValue = new Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest();
+            inValue.orderID = orderID;
+            Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse retVal = ((Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService)(this)).getAllItems1(inValue);
+            return retVal.getAllItemsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse> Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService.getAllItems1Async(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request) {
+            return base.Channel.getAllItems1Async(request);
+        }
+        
+        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse> getAllItems1Async(int orderID) {
+            Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest inValue = new Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest();
+            inValue.orderID = orderID;
+            return ((Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService)(this)).getAllItems1Async(inValue);
+        }
+        
         public string Addproducts(string name, string description, decimal price, int active, int maskid, int admin, int quantity) {
             return base.Channel.Addproducts(name, description, price, active, maskid, admin, quantity);
         }
@@ -2213,29 +2236,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         public System.Threading.Tasks.Task<string> GetcategorybynameAsync(string name) {
             return base.Channel.GetcategorybynameAsync(name);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService.getAllItems1(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request) {
-            return base.Channel.getAllItems1(request);
-        }
-        
-        public Group_MaskInc_FrontEnd.GroupServiceReference.Order_Item[] getAllItems1(int orderID) {
-            Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest inValue = new Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest();
-            inValue.orderID = orderID;
-            Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse retVal = ((Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService)(this)).getAllItems1(inValue);
-            return retVal.getAllItemsResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse> Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService.getAllItems1Async(Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest request) {
-            return base.Channel.getAllItems1Async(request);
-        }
-        
-        public System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsResponse> getAllItems1Async(int orderID) {
-            Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest inValue = new Group_MaskInc_FrontEnd.GroupServiceReference.getAllItemsRequest();
-            inValue.orderID = orderID;
-            return ((Group_MaskInc_FrontEnd.GroupServiceReference.IGroupService)(this)).getAllItems1Async(inValue);
         }
         
         public Group_MaskInc_FrontEnd.GroupServiceReference.Product[] GetProductsByMask_Type(string Name) {

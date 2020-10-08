@@ -115,6 +115,12 @@
   <wsdl:message name="IGroupService_GetInvoicebbydate_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetInvoicebbydateResponse" />
   </wsdl:message>
+  <wsdl:message name="IGroupService_getAllItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllItems" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_getAllItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllItemsResponse" />
+  </wsdl:message>
   <wsdl:message name="IGroupService_Addproducts_InputMessage">
     <wsdl:part name="parameters" element="tns:Addproducts" />
   </wsdl:message>
@@ -288,12 +294,6 @@
   </wsdl:message>
   <wsdl:message name="IGroupService_Getcategorybyname_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetcategorybynameResponse" />
-  </wsdl:message>
-  <wsdl:message name="IGroupService_getAllItems_InputMessage">
-    <wsdl:part name="parameters" element="tns:getAllItems" />
-  </wsdl:message>
-  <wsdl:message name="IGroupService_getAllItems_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getAllItemsResponse" />
   </wsdl:message>
   <wsdl:message name="IGroupService_GetProductsByMask_Type_InputMessage">
     <wsdl:part name="parameters" element="tns:GetProductsByMask_Type" />
@@ -470,6 +470,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetInvoicebbydate" message="tns:IGroupService_GetInvoicebbydate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetInvoicebbydateResponse" message="tns:IGroupService_GetInvoicebbydate_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="getAllItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/getAllItems" message="tns:IGroupService_getAllItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/getAllItemsResponse" message="tns:IGroupService_getAllItems_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Addproducts">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/Addproducts" message="tns:IGroupService_Addproducts_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/AddproductsResponse" message="tns:IGroupService_Addproducts_OutputMessage" />
@@ -585,10 +589,6 @@
     <wsdl:operation name="Getcategorybyname">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/Getcategorybyname" message="tns:IGroupService_Getcategorybyname_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetcategorybynameResponse" message="tns:IGroupService_Getcategorybyname_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="getAllItems">
-      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/getAllItems" message="tns:IGroupService_getAllItems_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/getAllItemsResponse" message="tns:IGroupService_getAllItems_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetProductsByMask_Type">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetProductsByMask_Type" message="tns:IGroupService_GetProductsByMask_Type_InputMessage" />
@@ -816,6 +816,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetInvoicebbydate">
       <soap:operation soapAction="http://tempuri.org/IGroupService/GetInvoicebbydate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllItems">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/getAllItems" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1077,15 +1086,6 @@
     </wsdl:operation>
     <wsdl:operation name="Getcategorybyname">
       <soap:operation soapAction="http://tempuri.org/IGroupService/Getcategorybyname" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getAllItems">
-      <soap:operation soapAction="http://tempuri.org/IGroupService/getAllItems" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

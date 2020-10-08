@@ -581,6 +581,7 @@
     <Content Include="assets\plugins\slick-1.8.0\fonts\slick.ttf" />
     <Content Include="assets\plugins\slick-1.8.0\fonts\slick.woff" />
     <Content Include="AdminMain.aspx" />
+    <Content Include="Invoice.aspx" />
     <Content Include="Reports.aspx" />
     <Content Include="UpdateUser.aspx" />
     <Content Include="AboutProduct.aspx" />
@@ -860,6 +861,13 @@
       <DependentUpon>EditSize.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hash.cs" />
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceByDate.aspx.cs">
       <DependentUpon>InvoiceByDate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
