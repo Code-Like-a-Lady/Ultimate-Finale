@@ -582,6 +582,7 @@
     <Content Include="assets\plugins\slick-1.8.0\fonts\slick.woff" />
     <Content Include="AdminMain.aspx" />
     <Content Include="Invoice.aspx" />
+    <Content Include="Report.aspx" />
     <Content Include="Reports.aspx" />
     <Content Include="UpdateUser.aspx" />
     <Content Include="AboutProduct.aspx" />
@@ -632,6 +633,9 @@
     <Content Include="Connected Services\GroupServiceReference\Group_MaskInc_FrontEnd.GroupServiceReference.PaymentType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\GroupServiceReference\GroupService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GroupServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -938,6 +942,13 @@
     </Compile>
     <Compile Include="RemoveProduct.aspx.designer.cs">
       <DependentUpon>RemoveProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShoppingCart.cs" />
     <Compile Include="Casual.aspx.cs">

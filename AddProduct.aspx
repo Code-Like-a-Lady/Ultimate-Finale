@@ -72,7 +72,7 @@
 
                 <!--- BUTTONS: -->
 
-                <div class="add-button">
+                <div class="btn btn-link">
                     <div class="col-lg-5 offset-lg-1 text-left text-lg-right">
                         <div class="site-btn clear-btn" onclick="AddProduct_Click">Add Product</div>
                     </div>

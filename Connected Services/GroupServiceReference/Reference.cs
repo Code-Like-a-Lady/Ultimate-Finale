@@ -1386,6 +1386,18 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="GroupServiceReference.IGroupService")]
     public interface IGroupService {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/placeOrder", ReplyAction="http://tempuri.org/IGroupService/placeOrderResponse")]
+        bool placeOrder(int userId, int shipping, int paymentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/placeOrder", ReplyAction="http://tempuri.org/IGroupService/placeOrderResponse")]
+        System.Threading.Tasks.Task<bool> placeOrderAsync(int userId, int shipping, int paymentId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/makePayment", ReplyAction="http://tempuri.org/IGroupService/makePaymentResponse")]
+        int makePayment(string cardNum, string cvv, string expiry, string cardHolder, string payType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/makePayment", ReplyAction="http://tempuri.org/IGroupService/makePaymentResponse")]
+        System.Threading.Tasks.Task<int> makePaymentAsync(string cardNum, string cvv, string expiry, string cardHolder, string payType);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getPaymentTypes", ReplyAction="http://tempuri.org/IGroupService/getPaymentTypesResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.PaymentType[] getPaymentTypes();
         
@@ -1681,6 +1693,18 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetProductsByMask_Type", ReplyAction="http://tempuri.org/IGroupService/GetProductsByMask_TypeResponse")]
         System.Threading.Tasks.Task<Group_MaskInc_FrontEnd.GroupServiceReference.Product[]> GetProductsByMask_TypeAsync(string Name);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getBasicStats", ReplyAction="http://tempuri.org/IGroupService/getBasicStatsResponse")]
+        System.Collections.Generic.Dictionary<string, string> getBasicStats(System.DateTime dt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getBasicStats", ReplyAction="http://tempuri.org/IGroupService/getBasicStatsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> getBasicStatsAsync(System.DateTime dt);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getStats", ReplyAction="http://tempuri.org/IGroupService/getStatsResponse")]
+        System.Collections.Generic.Dictionary<string, string> getStats(System.DateTime day1, System.DateTime day2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/getStats", ReplyAction="http://tempuri.org/IGroupService/getStatsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> getStatsAsync(System.DateTime day1, System.DateTime day2);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/GetAllDeliveries", ReplyAction="http://tempuri.org/IGroupService/GetAllDeliveriesResponse")]
         Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetAllDeliveries();
         
@@ -1764,18 +1788,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/CalculateTotalQuantity", ReplyAction="http://tempuri.org/IGroupService/CalculateTotalQuantityResponse")]
         System.Threading.Tasks.Task<int> CalculateTotalQuantityAsync(int ClientID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/placeOrder", ReplyAction="http://tempuri.org/IGroupService/placeOrderResponse")]
-        bool placeOrder(int userId, int shipping, int paymentId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/placeOrder", ReplyAction="http://tempuri.org/IGroupService/placeOrderResponse")]
-        System.Threading.Tasks.Task<bool> placeOrderAsync(int userId, int shipping, int paymentId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/makePayment", ReplyAction="http://tempuri.org/IGroupService/makePaymentResponse")]
-        int makePayment(string cardNum, string cvv, string expiry, string cardHolder, string payType);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGroupService/makePayment", ReplyAction="http://tempuri.org/IGroupService/makePaymentResponse")]
-        System.Threading.Tasks.Task<int> makePaymentAsync(string cardNum, string cvv, string expiry, string cardHolder, string payType);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1837,6 +1849,22 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         public GroupServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public bool placeOrder(int userId, int shipping, int paymentId) {
+            return base.Channel.placeOrder(userId, shipping, paymentId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> placeOrderAsync(int userId, int shipping, int paymentId) {
+            return base.Channel.placeOrderAsync(userId, shipping, paymentId);
+        }
+        
+        public int makePayment(string cardNum, string cvv, string expiry, string cardHolder, string payType) {
+            return base.Channel.makePayment(cardNum, cvv, expiry, cardHolder, payType);
+        }
+        
+        public System.Threading.Tasks.Task<int> makePaymentAsync(string cardNum, string cvv, string expiry, string cardHolder, string payType) {
+            return base.Channel.makePaymentAsync(cardNum, cvv, expiry, cardHolder, payType);
         }
         
         public Group_MaskInc_FrontEnd.GroupServiceReference.PaymentType[] getPaymentTypes() {
@@ -2246,6 +2274,22 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
             return base.Channel.GetProductsByMask_TypeAsync(Name);
         }
         
+        public System.Collections.Generic.Dictionary<string, string> getBasicStats(System.DateTime dt) {
+            return base.Channel.getBasicStats(dt);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> getBasicStatsAsync(System.DateTime dt) {
+            return base.Channel.getBasicStatsAsync(dt);
+        }
+        
+        public System.Collections.Generic.Dictionary<string, string> getStats(System.DateTime day1, System.DateTime day2) {
+            return base.Channel.getStats(day1, day2);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> getStatsAsync(System.DateTime day1, System.DateTime day2) {
+            return base.Channel.getStatsAsync(day1, day2);
+        }
+        
         public Group_MaskInc_FrontEnd.GroupServiceReference.Delivery[] GetAllDeliveries() {
             return base.Channel.GetAllDeliveries();
         }
@@ -2356,22 +2400,6 @@ namespace Group_MaskInc_FrontEnd.GroupServiceReference {
         
         public System.Threading.Tasks.Task<int> CalculateTotalQuantityAsync(int ClientID) {
             return base.Channel.CalculateTotalQuantityAsync(ClientID);
-        }
-        
-        public bool placeOrder(int userId, int shipping, int paymentId) {
-            return base.Channel.placeOrder(userId, shipping, paymentId);
-        }
-        
-        public System.Threading.Tasks.Task<bool> placeOrderAsync(int userId, int shipping, int paymentId) {
-            return base.Channel.placeOrderAsync(userId, shipping, paymentId);
-        }
-        
-        public int makePayment(string cardNum, string cvv, string expiry, string cardHolder, string payType) {
-            return base.Channel.makePayment(cardNum, cvv, expiry, cardHolder, payType);
-        }
-        
-        public System.Threading.Tasks.Task<int> makePaymentAsync(string cardNum, string cvv, string expiry, string cardHolder, string payType) {
-            return base.Channel.makePaymentAsync(cardNum, cvv, expiry, cardHolder, payType);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="Group_MaskInc_FrontEnd.WebForm14" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reports.aspx.cs" Inherits="Group_MaskInc_FrontEnd.Reports" %>
 
 <!DOCTYPE html>
 
