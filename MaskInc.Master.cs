@@ -34,7 +34,8 @@ namespace Group_MaskInc_FrontEnd
             }
             else
             {
-                AdminNav.Visible = false;
+                ClientNav.Visible = false;
+                //AdminNav.Visible = false;
             }
 
         }

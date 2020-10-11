@@ -76,7 +76,7 @@
 
                     </ul>
                 </nav>
-           <nav class="main-menu mobile-menu" runat="server" id="AdminNav">
+           <nav class="main-menu mobile_menu" runat="server" id="AdminNav">
                     <ul>
                         <li><a class="active" href="Home.aspx">Home</a></li>
                         <li>

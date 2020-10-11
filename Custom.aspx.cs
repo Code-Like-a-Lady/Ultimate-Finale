@@ -36,10 +36,5 @@ namespace Group_MaskInc_FrontEnd
             }
             custom.InnerHtml = display;
         }
-
-        protected void AddCustom_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AddCustomProduct.aspx");
-        }
     }
 }

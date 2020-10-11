@@ -17,6 +17,6 @@
 
              </div>
     <div class="mt-10">
-    <asp:Button ID="btn_custom" runat="server" Text="Create Custom" class="genric-btn primary-border" OnClick="AddCustom_Click" />
+         <button type="button" class="site-btn update-btn" onclick="location.href='AddCustomProduct.aspx'">Create Custom</button>
     </div>
 </asp:Content>
