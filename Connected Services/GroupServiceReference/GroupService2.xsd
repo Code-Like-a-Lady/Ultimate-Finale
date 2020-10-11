@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:53386/GroupService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Group_Project" />
+  <xs:import schemaLocation="http://localhost:53386/GroupService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="placeOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="shipping" type="xs:int" />
+        <xs:element minOccurs="0" name="paymentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="placeOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="placeOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="makePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cardNum" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cvv" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="expiry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cardHolder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="payType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="makePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="makePaymentResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="getPaymentTypes">
     <xs:complexType>
       <xs:sequence />
@@ -731,6 +766,35 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getBasicStats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBasicStatsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="getBasicStatsResult" nillable="true" type="q28:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="day1" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="day2" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getStatsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="getStatsResult" nillable="true" type="q29:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAllDeliveries">
     <xs:complexType>
       <xs:sequence />
@@ -739,7 +803,7 @@
   <xs:element name="GetAllDeliveriesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllDeliveriesResult" nillable="true" type="q28:ArrayOfDelivery" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllDeliveriesResult" nillable="true" type="q30:ArrayOfDelivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -753,7 +817,7 @@
   <xs:element name="GetDeliveriesForClientResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesForClientResult" nillable="true" type="q29:ArrayOfDelivery" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesForClientResult" nillable="true" type="q31:ArrayOfDelivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -767,7 +831,7 @@
   <xs:element name="GetDeliveriesByCompanyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesByCompanyResult" nillable="true" type="q30:ArrayOfOrder_Table" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveriesByCompanyResult" nillable="true" type="q32:ArrayOfOrder_Table" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -781,7 +845,7 @@
   <xs:element name="GetDeliveryForOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryForOrderResult" nillable="true" type="q31:Delivery" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryForOrderResult" nillable="true" type="q33:Delivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -795,7 +859,7 @@
   <xs:element name="GetDeliveryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryResult" nillable="true" type="q32:Delivery" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetDeliveryResult" nillable="true" type="q34:Delivery" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -844,7 +908,7 @@
   <xs:element name="GetCartItemResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetCartItemResult" nillable="true" type="q33:Cart" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetCartItemResult" nillable="true" type="q35:Cart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -858,7 +922,7 @@
   <xs:element name="GetAllCartItemsForClientResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllCartItemsForClientResult" nillable="true" type="q34:ArrayOfCart" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllCartItemsForClientResult" nillable="true" type="q36:ArrayOfCart" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -872,7 +936,7 @@
   <xs:element name="GetAllProductsInCartResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllProductsInCartResult" nillable="true" type="q35:ArrayOfProduct" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Group_Project" minOccurs="0" name="GetAllProductsInCartResult" nillable="true" type="q37:ArrayOfProduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -930,40 +994,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="CalculateTotalQuantityResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="placeOrder">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="userId" type="xs:int" />
-        <xs:element minOccurs="0" name="shipping" type="xs:int" />
-        <xs:element minOccurs="0" name="paymentId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="placeOrderResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="placeOrderResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="makePayment">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="cardNum" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="cvv" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="expiry" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="cardHolder" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="payType" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="makePaymentResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="makePaymentResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

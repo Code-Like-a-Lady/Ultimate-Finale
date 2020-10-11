@@ -5,8 +5,21 @@
       <xsd:import schemaLocation="http://localhost:53386/GroupService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:53386/GroupService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:53386/GroupService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Group_Project" />
+      <xsd:import schemaLocation="http://localhost:53386/GroupService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IGroupService_placeOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:placeOrder" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_placeOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:placeOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_makePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:makePayment" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_makePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:makePaymentResponse" />
+  </wsdl:message>
   <wsdl:message name="IGroupService_getPaymentTypes_InputMessage">
     <wsdl:part name="parameters" element="tns:getPaymentTypes" />
   </wsdl:message>
@@ -301,6 +314,18 @@
   <wsdl:message name="IGroupService_GetProductsByMask_Type_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProductsByMask_TypeResponse" />
   </wsdl:message>
+  <wsdl:message name="IGroupService_getBasicStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBasicStats" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_getBasicStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBasicStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_getStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStats" />
+  </wsdl:message>
+  <wsdl:message name="IGroupService_getStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStatsResponse" />
+  </wsdl:message>
   <wsdl:message name="IGroupService_GetAllDeliveries_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllDeliveries" />
   </wsdl:message>
@@ -385,19 +410,15 @@
   <wsdl:message name="IGroupService_CalculateTotalQuantity_OutputMessage">
     <wsdl:part name="parameters" element="tns:CalculateTotalQuantityResponse" />
   </wsdl:message>
-  <wsdl:message name="IGroupService_placeOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:placeOrder" />
-  </wsdl:message>
-  <wsdl:message name="IGroupService_placeOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:placeOrderResponse" />
-  </wsdl:message>
-  <wsdl:message name="IGroupService_makePayment_InputMessage">
-    <wsdl:part name="parameters" element="tns:makePayment" />
-  </wsdl:message>
-  <wsdl:message name="IGroupService_makePayment_OutputMessage">
-    <wsdl:part name="parameters" element="tns:makePaymentResponse" />
-  </wsdl:message>
   <wsdl:portType name="IGroupService">
+    <wsdl:operation name="placeOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/placeOrder" message="tns:IGroupService_placeOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/placeOrderResponse" message="tns:IGroupService_placeOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="makePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/makePayment" message="tns:IGroupService_makePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/makePaymentResponse" message="tns:IGroupService_makePayment_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="getPaymentTypes">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/getPaymentTypes" message="tns:IGroupService_getPaymentTypes_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/getPaymentTypesResponse" message="tns:IGroupService_getPaymentTypes_OutputMessage" />
@@ -594,6 +615,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetProductsByMask_Type" message="tns:IGroupService_GetProductsByMask_Type_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetProductsByMask_TypeResponse" message="tns:IGroupService_GetProductsByMask_Type_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="getBasicStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/getBasicStats" message="tns:IGroupService_getBasicStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/getBasicStatsResponse" message="tns:IGroupService_getBasicStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/getStats" message="tns:IGroupService_getStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/getStatsResponse" message="tns:IGroupService_getStats_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetAllDeliveries">
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/GetAllDeliveries" message="tns:IGroupService_GetAllDeliveries_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/GetAllDeliveriesResponse" message="tns:IGroupService_GetAllDeliveries_OutputMessage" />
@@ -650,17 +679,27 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/CalculateTotalQuantity" message="tns:IGroupService_CalculateTotalQuantity_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/CalculateTotalQuantityResponse" message="tns:IGroupService_CalculateTotalQuantity_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="placeOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/placeOrder" message="tns:IGroupService_placeOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/placeOrderResponse" message="tns:IGroupService_placeOrder_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="makePayment">
-      <wsdl:input wsaw:Action="http://tempuri.org/IGroupService/makePayment" message="tns:IGroupService_makePayment_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IGroupService/makePaymentResponse" message="tns:IGroupService_makePayment_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IGroupService" type="tns:IGroupService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="placeOrder">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/placeOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makePayment">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/makePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getPaymentTypes">
       <soap:operation soapAction="http://tempuri.org/IGroupService/getPaymentTypes" style="document" />
       <wsdl:input>
@@ -1102,6 +1141,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getBasicStats">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/getBasicStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStats">
+      <soap:operation soapAction="http://tempuri.org/IGroupService/getStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetAllDeliveries">
       <soap:operation soapAction="http://tempuri.org/IGroupService/GetAllDeliveries" style="document" />
       <wsdl:input>
@@ -1221,24 +1278,6 @@
     </wsdl:operation>
     <wsdl:operation name="CalculateTotalQuantity">
       <soap:operation soapAction="http://tempuri.org/IGroupService/CalculateTotalQuantity" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="placeOrder">
-      <soap:operation soapAction="http://tempuri.org/IGroupService/placeOrder" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="makePayment">
-      <soap:operation soapAction="http://tempuri.org/IGroupService/makePayment" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
