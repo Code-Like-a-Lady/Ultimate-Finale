@@ -13,10 +13,17 @@
     </section>
     <!-- Product Page Section End -->
       <!-- Catalogue will come in here -->
-                <div id="custom" runat="server">
+   <section class="related-product spad">
+        <div class="container">
+            <div class ="row"  id="custom" runat="server">
 
-             </div>
+          
     <div class="mt-10">
     <asp:Button ID="btn_custom" runat="server" Text="Create Custom" class="genric-btn primary-border" OnClick="AddCustom_Click" />
     </div>
+                  </div>
+
+               
+          </div>
+    </section>
 </asp:Content>

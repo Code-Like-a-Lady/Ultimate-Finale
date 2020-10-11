@@ -62,9 +62,10 @@
                
 
                     
-                </div>
-                       
-                    <div class="col-lg-3">
+                
+             
+                  <div class="row">
+                    <div class="col-lg-12">
                         <div class="order-table">
                             <div class="cart-item">
                                 <span>Price(Excl. Tax)</span>
@@ -94,7 +95,8 @@
                         </div>
                     </div>
                 </div>
-            
+              </div>
+             </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="payment-method">
@@ -103,7 +105,7 @@
                     </div>
                 </div>
             
-                </form>    
+            </form>    
         </div>
 
     </section>
