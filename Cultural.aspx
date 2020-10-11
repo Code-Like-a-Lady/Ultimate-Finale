@@ -13,8 +13,14 @@
             
     <!-- Product Page Section End -->
      <!-- Catalogue will come in here -->
-                <div id="cultural" runat="server">
+ <section class="related-product spad">
+        <div class="container">
+            <div class ="row"  id="cultural" runat="server">
 
-             </div>
-    
+            </div>
+
+               
+          </div>
+    </section>
+
 </asp:Content>

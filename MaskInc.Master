@@ -56,7 +56,11 @@
                         <img src="assets/img/icons/cart2.png" alt="">
                         <span>0</span>
                     </a>
-                     <a href="#" runat="server" class="site-btn" onserverclick="Logout_Click">Log Out</a>
+                     
+                </div>
+                 <div class="user-access">
+                
+                    <a href="Logout.aspx" >LogOut</a>
                 </div>
                 <nav class="main-menu mobile-menu" runat="server" id="ClientNav">
                     <ul>

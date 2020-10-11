@@ -12,7 +12,13 @@
         </div>
     </section>
     <!-- Product Page Section End -->
-        <div id="nano" runat="server"> 
-                    </div>
- 
+       <section class="related-product spad">
+        <div class="container">
+            <div class ="row"  id="nano" runat="server">
+
+            </div>
+
+               
+          </div>
+    </section>
 </asp:Content>

@@ -564,6 +564,54 @@
     <Content Include="assets2\scss\_testimonial.scss" />
     <Content Include="assets2\scss\_variables.scss" />
     <Content Include="AdminSection.aspx" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Admin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Cart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Client.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Custom_Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Delivery.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.getAllItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Mask_Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Order_Item.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Order_Table.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.PaymentType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Product_Size.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.Size_Table.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\Group_MaskInc_FrontEnd.ServiceReference1.User_Table.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Contact.aspx" />
     <Content Include="assets\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.eot" />
     <Content Include="assets\plugins\fontawesome-free-5.0.1\webfonts\fa-brands-400.ttf" />
@@ -587,6 +635,7 @@
     <Content Include="AboutProduct.aspx" />
     <Content Include="AddAdmin.aspx" />
     <Content Include="Catalog.aspx" />
+    <Content Include="Logout.aspx" />
     <None Include="Connected Services\GroupServiceReference\GroupService.disco" />
     <None Include="Connected Services\GroupServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\GroupServiceReference\configuration.svcinfo" />
@@ -825,6 +874,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="EditCustomProduct.aspx.cs">
       <DependentUpon>EditCustomProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1045,6 +1099,13 @@
     <Compile Include="Catalog.aspx.designer.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1104,6 +1165,7 @@
     <None Include="Connected Services\GroupServiceReference\GroupService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceReference1\GroupService.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1116,6 +1178,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\GroupServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
