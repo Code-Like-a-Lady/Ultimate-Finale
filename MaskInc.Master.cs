@@ -34,7 +34,8 @@ namespace Group_MaskInc_FrontEnd
             }
             else
             {
-                AdminNav.Visible = false;
+                //AdminNav.Visible = false;
+                ClientNav.Visible = false;
             }
 
         }
@@ -44,6 +45,5 @@ namespace Group_MaskInc_FrontEnd
           Session["LoggedInUserID"] = null;
           Response.Redirect("Login.aspx");
       }
-
     }
 }

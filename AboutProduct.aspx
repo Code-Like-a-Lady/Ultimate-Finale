@@ -15,10 +15,10 @@
 
              </div>
    <div class="mt-10" id="btn_AddtoCart" runat="server">
-       <a href="#" runat="server" class="site-btn" name="AddToCart" onserverclick="Unnamed_ServerClick">Add to Cart</a>
+      <button runat="server" class="site-btn" name="AddToCart" onserverclick="Unnamed_ServerClick">Add to Cart</button>
     </div>
     <div class="mt-10" id="btn_removeProduct" runat="server">
-         <a href="#" runat="server" class="site-btn" onserverclick="Unnamed_ServerClick1">Remove Product</a>
+         <button runat="server" class="site-btn" onserverclick="Unnamed_ServerClick1">Remove Product</button>
     </div>
         </div>                      
     </section>

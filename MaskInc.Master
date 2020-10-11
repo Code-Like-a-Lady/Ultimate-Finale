@@ -59,8 +59,7 @@
                      
                 </div>
                  <div class="user-access">
-                
-                    <a href="Logout.aspx" >LogOut</a>
+                     <button runat="server" class="site-btn" name="Logout" onserverclick="Logout_Click">Log Out</button>
                 </div>
                 <nav class="main-menu mobile-menu" runat="server" id="ClientNav">
                     <ul>
@@ -80,7 +79,7 @@
 
                     </ul>
                 </nav>
-           <nav class="main-menu mobile-menu" runat="server" id="AdminNav">
+           <nav class="main-menu mobile_menu" runat="server" id="AdminNav">
                     <ul>
                         <li><a class="active" href="Home.aspx">Home</a></li>
                         <li>
@@ -94,7 +93,7 @@
                             </ul>
                         </li>  
                                 <li><a href="InvoiceByDate.aspx">Invoices</a></li>
-                                <li><a href="Reports.aspx">Reports</a></li>
+                                <li><a href="Report.aspx">Reports</a></li>
                                 <li><a href="UpdateAdmin.aspx">Update Admin</a></li>
                                 <li><a href="AddProduct.aspx">Add Product</a></li>
                     </ul>
