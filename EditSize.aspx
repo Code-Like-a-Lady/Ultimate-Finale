@@ -16,7 +16,7 @@
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Size ID'" required
                                 class="single-input" runat="server" id="SizeID">
                         </div>
-
+                          <form runat="server">
                         <div class="mt-10">
                             <asp:Button ID="btn_EditSize" runat="server" Text="Edit Size" class="genric-btn primary-border" OnClick="EditSize_Click" />
                         </div>
@@ -32,7 +32,7 @@
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Dimension'" required
                                 class="single-input" runat="server" id="Dimension">
                         </div>
-
+                      
                         <div class="mt-10">
                             <asp:Button ID="btn_UpdateSize" runat="server" Text="Update Size" class="genric-btn primary-border" OnClick="UpdateSize_Click" />
                         </div>
@@ -40,7 +40,7 @@
                         <div class="mt-10">
                             <asp:Label ID="error" runat="server" Text="" visible="false" ></asp:Label>
                         </div>
-                        
+                   </form>
                     </div>
                 </div>
             </div>

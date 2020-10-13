@@ -103,7 +103,10 @@
     </div>
        <p>
                             
-                            <input style="background-color:grey" id="Button2" name="Update Admin" class="log-btn" type="button" value="Update" /></p>
+                            
+
+  <asp:Button ID="Button3" runat="server" Height="47px" Text="Update Admin" onclick="Update_Click" Width="113px" />
+       </p>
        <p>
                             <asp:Label ID="error" runat="server" Text="" visible="false" ></asp:Label>
                         </p>

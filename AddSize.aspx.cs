@@ -44,5 +44,9 @@ namespace Group_MaskInc_FrontEnd
                 error.Visible = true;
             }
         }
-    }
+        protected void EditSize_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EditSize.aspx");
+        }
+     }
 }

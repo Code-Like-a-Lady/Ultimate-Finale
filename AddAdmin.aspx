@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <form id="form1" runat="server">
+      
     <div class="whole-wrap">
         <div class="container box_1170">
 
@@ -24,17 +24,21 @@
                              
                                 class="single-input" runat="server" id="Surname">
                         </div>
+                        <form runat="server">
                         <div class="mt-10">
-                            <asp:Button ID="bt_register" runat="server" Text="Add Admin" class="genric-btn primary-border" OnClick="btn_register()" />
+                         
+                             <asp:Button ID="Button1" runat="server" Text="Add Admin"  OnClick="btn_register"/>
                         </div>
                         <div class="mt-10">
                             <asp:Label ID="error" runat="server" Text="" visible="false" ></asp:Label>
                         </div>
+                       </form>
                         
                     </div>
                 </div>
+               
             </div>
         </div>
     </div>
-    </form>
+
 </asp:Content>

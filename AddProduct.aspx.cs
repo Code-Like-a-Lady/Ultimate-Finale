@@ -70,7 +70,7 @@ namespace Group_MaskInc_FrontEnd
             else if (add.Equals("not added"))
             {
                 //Display error message to admin  
-                error.Value = "Product added to database. ";
+                error.Value = "Product not added to database. ";
                 error.Visible = true;
             }
             //If product already exists

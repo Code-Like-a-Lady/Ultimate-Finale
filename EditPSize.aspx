@@ -16,7 +16,7 @@
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Product Size ID'" required
                                 class="single-input" runat="server" id="P_SizeID">
                         </div>
-
+                        <form runat="server">
                         <div class="mt-10">
                             <asp:Button ID="EditP_Size" runat="server" Text="Edit Product Size" class="genric-btn primary-border" OnClick="EditPSize_Click" />
                         </div>
@@ -39,8 +39,8 @@
 
                         <div class="mt-10">
                             <asp:Label ID="error" runat="server" Text="" visible="false" ></asp:Label>
-                        </div>
-                        
+                        </div>             
+                    </form>
                     </div>
                 </div>
             </div>

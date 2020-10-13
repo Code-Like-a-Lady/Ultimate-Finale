@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <form id="form1" runat="server">
+     
     <div class="whole-wrap">
         <div class="container box_1170">
             <div class="section-top-border">
@@ -65,14 +65,15 @@
                         </div>
                         
                          </div>
+                 <form runat="server">
                         <div class="mt-10">
                          <asp:Button ID="btn_update" runat="server" Text="Update User" class="genric-btn primary-border" OnClick="Update_Click" />
                          </div>
                         <div class="mt-10">
                             <asp:Label ID="error" runat="server" Text="" visible="false" ></asp:Label>
                         </div>
-                       
+                       </form>
                     </div>
                 </div>
-    </form>
+
 </asp:Content>

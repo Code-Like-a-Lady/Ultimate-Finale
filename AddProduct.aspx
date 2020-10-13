@@ -4,8 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <form id="form1" runat="server">
     <div class="AddProduct_Page">
         <div class="container">
+           <div class="col-lg-10 offset-lg-1 text-left text-lg-right">
             <div class="AddProduct_Table">
                 <table>
                     <thead>
@@ -73,14 +75,22 @@
                 <!--- BUTTONS: -->
 
                 <div class="btn btn-link">
-                    <div class="col-lg-5 offset-lg-1 text-left text-lg-right">
-                        <div class="site-btn clear-btn" onclick="AddProduct_Click">Add Product</div>
+                    
+                     <!--  <div class="site-btn clear-btn" onclick="AddProduct_Click" >Add Product</div>-->
+                        <asp:Button ID="Button1" runat="server" Text="Add Product" OnClick="AddProduct_Click" Width="198px" />
                     </div>
                 </div>
+
+              
+
+                            
+
+              
 
             </div>
         </div>
     </div>
 
     <!---END ADD PRODUCT PAGE --->
+    </form>
 </asp:Content>

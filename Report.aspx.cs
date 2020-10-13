@@ -17,18 +17,22 @@ namespace Group_MaskInc_FrontEnd
             Dictionary<string, string> myStats = SR.getBasicStats(DateTime.Now);
             string displayStats = "";
 
-            foreach(KeyValuePair<string, string> valuePair in myStats)
+            foreach (KeyValuePair<string, string> valuePair in myStats)
             {
-                displayStats += "<tr><td class='display-col'>" + valuePair.Key + " " + valuePair.Value + "</td>";
+                // displayStats += "<td class='display-col'>" + valuePair.Key + " " + valuePair.Value + "</td>";
+                displayStats += "<tr><td class='display-col-1'>" + valuePair.Key + "</td>";
+                displayStats += "<td class='display-col-2'>" + valuePair.Value + "</td>";
             }
-            reportItems.InnerHtml = displayStats;
+            report1.InnerHtml = displayStats;
 
             Dictionary<string, string> myStats1 = SR.getStats(DateTime.Now.AddDays(-30), DateTime.Now);
             string displayStats1 = "";
 
             foreach (KeyValuePair<string, string> valuePair in myStats1)
             {
-                displayStats1 += "<tr><td class='display-col'>" + valuePair.Key + " " + valuePair.Value + "</td>";
+
+                displayStats1 += "<tr><td class='display-col-1'>" + valuePair.Key + "</td>";
+                displayStats1 += "<td class='display-col-2'>" + valuePair.Value + "</td>";
             }
             reportItems1.InnerHtml = displayStats1;
         }

@@ -16,13 +16,13 @@
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required
                                 class="single-input" runat="server" id="Name">
                         </div>
-
+                       
                          <div class="mt-10">
                             <input type="text" name="Dimension" placeholder="Dimension"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Dimension'" required
                                 class="single-input" runat="server" id="Dimension">
                         </div>
-
+                          <form runat="server">
                         <div class="mt-10">
                             <asp:Button ID="btn_AddSize" runat="server" Text="Add Size" class="genric-btn primary-border" OnClick="AddSize_Click" />
                         </div>
@@ -34,7 +34,7 @@
                         <div class="mt-10">
                             <asp:Label ID="error" runat="server" Text="" visible="false" ></asp:Label>
                         </div>
-                        
+                        </form>
                     </div>
                 </div>
             </div>

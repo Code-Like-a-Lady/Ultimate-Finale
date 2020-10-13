@@ -17,7 +17,7 @@
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mask ID'" required
                                 class="single-input" runat="server" id="MaskID">
                         </div>
-
+                          <form runat="server">
                         <div class="mt-10">
                             <asp:Button ID="btn_EditMaskType" runat="server" Text="Edit Mask Type" class="genric-btn primary-border" OnClick="EditMaskType_Click" />
                         </div>
@@ -39,15 +39,17 @@
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Admin'" required
                                 class="single-input" runat="server" id="MaskAdmin">
                         </div>
-
+                      
                         <div class="mt-10">
                             <asp:Button ID="btn_UpdateMask" runat="server" Text="Update Mask Type" class="genric-btn primary-border" OnClick="UpdateMask_Click" />
+                         
                         </div>
+    
 
                         <div class="mt-10">
                             <asp:Label ID="error" runat="server" Text="" Visible="false"></asp:Label>
                         </div>
-
+                     </form>
                     </div>
                 </div>
             </div>

@@ -13,5 +13,9 @@ namespace Group_MaskInc_FrontEnd
         {
 
         }
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+        }
     }
 }

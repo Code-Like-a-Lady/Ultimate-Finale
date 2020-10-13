@@ -15,13 +15,13 @@ namespace Group_MaskInc_FrontEnd
     {
 
         /// <summary>
-        /// reportItems control.
+        /// report1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl reportItems;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl report1;
 
         /// <summary>
         /// reportItems1 control.
