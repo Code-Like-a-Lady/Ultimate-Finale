@@ -16,6 +16,7 @@ namespace Group_MaskInc_FrontEnd
         //Page load gets details of existing product off ID 
         protected void Page_Load(object sender, EventArgs e)
         {
+          
             //Get the product id using URL parameter
             String param = Request.QueryString["ID"];
             int product_ID = Convert.ToInt32(param);

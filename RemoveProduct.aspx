@@ -4,6 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+
     <div class="RemoveProduct_Page">
         <div class="container">
             <div class="RemoveProduct_Table">
@@ -71,16 +73,19 @@
                 </table>
 
                 <!-- BUTTONS: -->
-
+                <form runat="server">
                  <div class="remove-button">
                     <div class="col-lg-5 offset-lg-1 text-left text-lg-right">
-                        <div class="site-btn clear-btn" onclick="RemoveProduct_Click">Remove Product</div>
+                        
+                        <asp:Button ID="Button1" runat="server" Height="54px" Text="Remove Product" onclick="RemoveProduct_Click"  Width="181px" />
                     </div>
                 </div>
+               </form>
 
             </div>
         </div>
     </div>
 
     <!--- END REMOVE PRODUCT PAGE -->
+  
 </asp:Content>

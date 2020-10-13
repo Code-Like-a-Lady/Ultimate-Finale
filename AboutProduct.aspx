@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <h1><i class="fa fa-cart-plus"></i>&nbsp;About Product</h1>
+      <form id="form1" runat="server">
+          <h1><i class="fa fa-cart-plus"></i>&nbsp;About Product</h1>
     <hr />
     <section class="product-page">
         <div class="container">
@@ -15,10 +16,14 @@
 
              </div>
    <div class="mt-10" id="btn_AddtoCart" runat="server">
-      <button runat="server" class="site-btn" name="AddToCart" onserverclick="Unnamed_ServerClick">Add to Cart</button>
+    
+       <asp:Button ID="Button2" runat="server" Height="58px" Text="AddToCart"  OnClick="Unnamed_ServerClick" Width="256px" />
     </div>
     <div class="mt-10" id="btn_removeProduct" runat="server">
-         <button runat="server" class="site-btn" onserverclick="Unnamed_ServerClick1">Remove Product</button>
+     
+
+         <asp:Button ID="Button1" runat="server" Height="57px" Text="Remove Product"  OnClick="Unnamed_ServerClick1" Width="295px" />
+
     </div>
         </div>                      
     </section>
@@ -29,4 +34,5 @@
 
              </div>
     </section>
+      </form>
 </asp:Content>

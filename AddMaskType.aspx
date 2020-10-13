@@ -26,12 +26,12 @@
                         </div>
                          
                         <div class="mt-10">
-                            <asp:Label ID="lblAdmin" runat="server" Text="Admin Name: "></asp:Label>
+                            <asp:Label ID="lblAdmin" runat="server" Text="Admin Name:          "></asp:Label>
                             <input type="text" name="Mask_Admin" placeholder="Admin"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Admin'" required
                                 class="single-input" runat="server" id="MaskAdmin">
                         </div>
-
+                        <form runat="server">
                         <div class="mt-10">
                             <asp:Button ID="btn_AddMask" runat="server" Text="Add Mask Type" class="genric-btn primary-border" OnClick="AddMask_Click" />
                         </div>
@@ -43,7 +43,7 @@
                         <div class="mt-10">
                             <asp:Label ID="error" runat="server" Text="" visible="false" ></asp:Label>
                         </div>
-                        
+                        </form>
                     </div>
                 </div>
             </div>

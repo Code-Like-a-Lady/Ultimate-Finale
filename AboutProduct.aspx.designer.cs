@@ -15,6 +15,15 @@ namespace Group_MaskInc_FrontEnd
     {
 
         /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
         /// pimage control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace Group_MaskInc_FrontEnd
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_AddtoCart;
 
         /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+
+        /// <summary>
         /// btn_removeProduct control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace Group_MaskInc_FrontEnd
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_removeProduct;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// prod control.

@@ -23,20 +23,20 @@ namespace Group_MaskInc_FrontEnd
                 int ID = Convert.ToInt32(Session["LoggedInUserID"]);
                 var user = sr.GetUser(ID);
 
-                if (user.Usertype.Equals("Admin"))
+                if (user.Usertype.Equals("Client"))
                 {
-                    ClientNav.Visible = false;
+                    ClientNav.Visible = true;
                 }
-                else if (user.Usertype.Equals("Client"))
+                else if (user.Usertype.Equals("Admin"))
                 {
-                    AdminNav.Visible = false;
+                   AdminNav.Visible = true;
                 }
             }
-            else
-            {
+          //  else
+          //  {
                 //AdminNav.Visible = false;
-                ClientNav.Visible = false;
-            }
+             //   ClientNav.Visible = true;
+           // }
 
         }
 

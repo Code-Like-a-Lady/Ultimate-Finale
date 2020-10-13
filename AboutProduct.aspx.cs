@@ -20,7 +20,7 @@ namespace Group_MaskInc_FrontEnd
                 if (user.Usertype.Equals("client"))
                 {
                     btn_removeProduct.Visible = false;
-                   
+
                 }
                 else if (user.Usertype.Equals("admin"))
                 {
@@ -41,30 +41,32 @@ namespace Group_MaskInc_FrontEnd
 
         }
 
-        
+
         //Add to cart click
         protected void Unnamed_ServerClick(object sender, EventArgs e)
         {
+            Response.Redirect("Home.aspx");
             //getting the user ifm
             int ID = Convert.ToInt32(Session["LoggedInUserID"]);
             ID = 9;
             //getting the product id
-            var itemid = Request.QueryString["ID"];
-            var id = Convert.ToInt32(itemid);
+           var itemid = Request.QueryString["ID"];
+           var id = Convert.ToInt32(itemid);
             var mask = sr.GetProduct(Convert.ToInt32(itemid));
 
             //adding to cart
-            bool add = sr.AddtoCart(ID, mask.Product_Id, 50, mask.Unit_Price * 50);
+           bool add = sr.AddtoCart(ID, mask.Product_Id, 50, mask.Unit_Price * 50);
         }
 
         //Removing a product
         protected void Unnamed_ServerClick1(object sender, EventArgs e)
         {
+            Response.Redirect("Home.aspx");
             //getting the user ifm
             int ID = Convert.ToInt32(Session["LoggedInUserID"]);
 
             //getting the product
-            var itemid = Request.QueryString["ID"];
+             var itemid = Request.QueryString["ID"];
             Response.Redirect("RemoveProduct.aspx?ID=" + itemid);
         }
     }
